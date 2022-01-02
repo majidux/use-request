@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import axios from 'axios';
 import { useEffect, useCallback } from 'react';
+import axios from 'axios';
 import { useStates } from 'use-states-react';
 import debounce from 'lodash/debounce';
 

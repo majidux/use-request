@@ -1,10 +1,11 @@
 {
-  "name": "use-request-react",
-  "version": "1.0.0",
+  "name": "use-request-react-hook",
+  "version": "1.0.2",
   "description": "Handling requests with a simple hooks",
   "main": "lib/index.js",
+  "types": "lib",
   "scripts": {
-    "build": "tsc -p .",
+    "build": "del lib y && tsc -p . && npm publish",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -14,18 +15,21 @@
   "keywords": [
     "react"
   ],
-  "author": "Majid Darvishnejad",
+  "author": "majid darvish",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/majidux/use-request/issues"
   },
   "homepage": "https://github.com/majidux/use-request#readme",
-  "devDependencies": {
+  "peerDependencies": {
     "@types/lodash": "^4.14.178",
     "@types/react": "^17.0.38",
     "axios": "^0.24.0",
     "lodash": "^4.17.21",
     "react": "^17.0.2",
     "use-states-react": "^1.0.3"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   }
 }
