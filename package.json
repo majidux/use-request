@@ -1,0 +1,22 @@
+{
+  "name": "use-request",
+  "version": "1.0.0",
+  "description": "Handling requests with a simple hooks",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/majidux/use-request.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Majid Darvishnejad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/majidux/use-request/issues"
+  },
+  "homepage": "https://github.com/majidux/use-request#readme"
+}
