@@ -1,9 +1,10 @@
 {
-  "name": "use-request",
+  "name": "use-request-react",
   "version": "1.0.0",
   "description": "Handling requests with a simple hooks",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
+    "build": "tsc -p .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,5 +19,13 @@
   "bugs": {
     "url": "https://github.com/majidux/use-request/issues"
   },
-  "homepage": "https://github.com/majidux/use-request#readme"
+  "homepage": "https://github.com/majidux/use-request#readme",
+  "devDependencies": {
+    "@types/lodash": "^4.14.178",
+    "@types/react": "^17.0.38",
+    "axios": "^0.24.0",
+    "lodash": "^4.17.21",
+    "react": "^17.0.2",
+    "use-states-react": "^1.0.3"
+  }
 }
