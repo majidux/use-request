@@ -3,18 +3,7 @@ import { useEffect, useCallback } from 'react';
 import axios from 'axios';
 import { useStates } from 'use-states-react';
 import debounce from 'lodash/debounce';
-
-interface ParameterType {
-  url: string;
-  method?: 'get' | 'post' | 'put' | 'delete';
-}
-
-interface ReturnType<T> {
-  response?: T;
-  error?: string;
-  isLoading?: boolean;
-  setParams?: (param: unknown) => void;
-}
+import type { ParameterType, ReturnType, StateType } from './types';
 
 const initialState = {
   response: undefined,
@@ -27,8 +16,8 @@ export const useRequest = <T>({
   url,
   method = 'get',
 }: ParameterType): ReturnType<T> => {
-  const [{ response, error, isLoading, params }, setState] =
-    useStates<any>(initialState);
+  const [state, setState] = useStates<StateType<T>>(initialState);
+  const { response, error, isLoading, params } = state;
   const fetchData = async () => {
     setState({ isLoading: true });
     try {
