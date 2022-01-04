@@ -21,7 +21,7 @@ export const useRequest = <T>({
   const fetchData = async () => {
     setState({ isLoading: true });
     try {
-      const result = await axios[method](`${url}`, { params });
+      const result = await axios[method](url, { params });
       setState({ response: result.data });
     } catch (error) {
       setState({ error: error });
